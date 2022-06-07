@@ -33,13 +33,12 @@ public class playerShoot : MonoBehaviour
         RaycastHit hit;
         string gameObjectShot;
 
-        if (Physics.Raycast(transform.position, myCamera.transform.forward, out hit))
+        if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward, out hit))
         {
             Vector3 shotPosition = hit.point;
             float shootDistance = hit.distance;
             gameObjectShot = hit.collider.gameObject.name;
 
-            // gameObjectShot == "platform"
             if (hit.transform.gameObject.CompareTag("tagPlatform"))
             {
                 Crosshair.color = new Color(1, 0, 0, 0.75f); // crosshair rojo
@@ -70,6 +69,10 @@ public class playerShoot : MonoBehaviour
             {
                 Crosshair.color = new Color(1, 1, 1, 0.75f); // crosshair blanco
             }
+        }
+        else
+        {
+            Crosshair.color = new Color(1, 1, 1, 0.75f); // crosshair blanco
         }
     }
 }

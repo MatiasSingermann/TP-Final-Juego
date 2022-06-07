@@ -104,9 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7cfd48dc6b450042864e2ce3df1df66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material:
-  - {fileID: 2100000, guid: c2d1599ccd14c30459b9e1a5b145a065, type: 2}
-  - {fileID: 2100000, guid: 52c796b652541b543b0c8fda2940ba43, type: 2}
-  - {fileID: 2100000, guid: 6fe5194583c71c247a68063d05ca3c76, type: 2}
-  - {fileID: 2100000, guid: bf771729b416b61478914ab5a592e4c9, type: 2}
-  - {fileID: 2100000, guid: 3bdf53b4da8586f4fa5ad34c77045c3f, type: 2}
+  White: {fileID: 2100000, guid: c2d1599ccd14c30459b9e1a5b145a065, type: 2}
+  Red: {fileID: 2100000, guid: 52c796b652541b543b0c8fda2940ba43, type: 2}
+  Blue: {fileID: 2100000, guid: 6fe5194583c71c247a68063d05ca3c76, type: 2}
+  Yellow: {fileID: 2100000, guid: bf771729b416b61478914ab5a592e4c9, type: 2}
+  Green: {fileID: 2100000, guid: 3bdf53b4da8586f4fa5ad34c77045c3f, type: 2}

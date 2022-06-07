@@ -4,20 +4,60 @@ using UnityEngine;
 
 public class paintPlatform : MonoBehaviour
 {
-    public Material[] material;
-    Renderer rend;
+    public Material White;
+    public Material Red;
+    public Material Blue;
+    public Material Yellow;
+    public Material Green;
+    Collider myCollider;
+
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        rend.enabled = true;
-        rend.sharedMaterial = material[0];
+        float rng = Random.Range(1, 4);
+
+        myCollider = GetComponent<BoxCollider>();
+
+        myCollider.enabled = false;
+
+        if (rng == 1)
+        {
+            GetComponent<Renderer>().material = Red;
+        }
+        if (rng == 2)
+        {
+            GetComponent<Renderer>().material = Blue;
+        }
+        if (rng == 3)
+        {
+            GetComponent<Renderer>().material = Yellow;
+        }
+        if (rng == 4)
+        {
+            GetComponent<Renderer>().material = Green;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(GetComponent<Renderer>().material == Red || GetComponent<Renderer>().material == Blue || GetComponent<Renderer>().material == Yellow || GetComponent<Renderer>().material == Green)
+        {
+            myCollider.enabled = false;
+        }
+        if (GetComponent<Renderer>().material == White)
+        {
+            myCollider.enabled = true;
+        }
+    }
+
+    void OnCollisionEnter(Collision playerPlatform)
+    {
+        if(player)
+        {
+
+        }
     }
 }
