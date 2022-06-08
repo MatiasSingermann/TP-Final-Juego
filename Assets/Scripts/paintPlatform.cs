@@ -56,25 +56,25 @@ public class paintPlatform : MonoBehaviour
         //}
     }
 
-    void OnCollisionEnter(Collision playerPlatform)
-    {
-        Debug.Log("toca");
-        if (playerPlatform.gameObject.name == "FPSController")
-        {
-            if (numberMaterial == 1 || numberMaterial == 2 || numberMaterial == 3 || numberMaterial == 4)
-            {
-                Debug.Log("no toca");
-                myCollider.enabled = false;
-            }
-            if (GetComponent<Renderer>().material == White)
-            {
-                Debug.Log("toca");
-                myCollider.enabled = true;
-            }
-        }
-        else
-        {
-            myCollider.enabled = true;
-        }
-    }
+    //void OnCollisionEnter(Collision playerPlatform)
+    //{
+    //    Debug.Log("toca");
+    //    if (playerPlatform.gameObject.name == "playerCollision")
+    //    {
+    //        if (numberMaterial == 1 || numberMaterial == 2 || numberMaterial == 3 || numberMaterial == 4)
+    //        {
+    //            Debug.Log("no toca");
+    //            myCollider.enabled = false;
+    //        }
+    //        if (GetComponent<Renderer>().material == White)
+    //        {
+    //            Debug.Log("toca");
+    //            myCollider.enabled = true;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        myCollider.enabled = true;
+    //    }
+    //}
 }
