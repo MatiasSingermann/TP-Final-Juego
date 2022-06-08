@@ -17,6 +17,8 @@ public class playerShoot : MonoBehaviour
 
     public paintPlatform scriptPaintPlatform;
 
+    public GameObject myPlatform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,8 +49,9 @@ public class playerShoot : MonoBehaviour
                 {
                     source.PlayOneShot(spraySound);
 
-                    if(scriptPlayerSprayColor.selectedColor == 0) // si el spray es rojo
+                    if(scriptPaintPlatform.GetComponent<Renderer>().material == scriptPaintPlatform.Red && scriptPlayerSprayColor.selectedColor == 0) // si el spray es rojo
                     {
+                        scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Rojo");
                     }
                     if (scriptPlayerSprayColor.selectedColor == 1) // si el spray es azul
