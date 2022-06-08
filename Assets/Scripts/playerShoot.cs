@@ -49,21 +49,26 @@ public class playerShoot : MonoBehaviour
                 {
                     source.PlayOneShot(spraySound);
 
-                    if(scriptPaintPlatform.GetComponent<Renderer>().material == scriptPaintPlatform.Red && scriptPlayerSprayColor.selectedColor == 0) // si el spray es rojo
+                    Debug.Log(scriptPaintPlatform.numberMaterial);
+
+                    if(scriptPaintPlatform.numberMaterial == 1 && scriptPlayerSprayColor.selectedColor == 0) // si el spray es rojo
                     {
                         scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Rojo");
                     }
-                    if (scriptPlayerSprayColor.selectedColor == 1) // si el spray es azul
+                    if (scriptPaintPlatform.numberMaterial == 2 && scriptPlayerSprayColor.selectedColor == 1) // si el spray es azul
                     {
+                        scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Azul");
                     }
-                    if (scriptPlayerSprayColor.selectedColor == 2) // si el spray es amarillo
+                    if (scriptPaintPlatform.numberMaterial == 3 && scriptPlayerSprayColor.selectedColor == 2) // si el spray es amarillo
                     {
+                        scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Amarillo");
                     }
-                    if (scriptPlayerSprayColor.selectedColor == 3) // si el spray es verde
+                    if (scriptPaintPlatform.numberMaterial == 4 && scriptPlayerSprayColor.selectedColor == 3) // si el spray es verde
                     {
+                        scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Verde");
                     }
                 }

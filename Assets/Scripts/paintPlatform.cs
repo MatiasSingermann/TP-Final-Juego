@@ -10,6 +10,7 @@ public class paintPlatform : MonoBehaviour
     public Material Yellow;
     public Material Green;
     public Collider myCollider;
+    public int numberMaterial;
 
     // Start is called before the first frame update
     void Start()
@@ -23,18 +24,22 @@ public class paintPlatform : MonoBehaviour
         if (rng == 1)
         {
             GetComponent<Renderer>().material = Red;
+            numberMaterial = 1;
         }
         if (rng == 2)
         {
             GetComponent<Renderer>().material = Blue;
+            numberMaterial = 2;
         }
         if (rng == 3)
         {
             GetComponent<Renderer>().material = Yellow;
+            numberMaterial = 3;
         }
         if (rng == 4)
         {
             GetComponent<Renderer>().material = Green;
+            numberMaterial = 4;
         }
     }
 
@@ -66,6 +71,10 @@ public class paintPlatform : MonoBehaviour
                 Debug.Log("toca");
                 myCollider.enabled = true;
             }
+        }
+        else
+        {
+            myCollider.enabled = true;
         }
     }
 }
