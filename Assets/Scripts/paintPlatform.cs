@@ -61,7 +61,7 @@ public class paintPlatform : MonoBehaviour
         Debug.Log("toca");
         if (playerPlatform.gameObject.name == "FPSController")
         {
-            if (GetComponent<Renderer>().material == Red || GetComponent<Renderer>().material == Blue || GetComponent<Renderer>().material == Yellow || GetComponent<Renderer>().material == Green)
+            if (numberMaterial == 1 || numberMaterial == 2 || numberMaterial == 3 || numberMaterial == 4)
             {
                 Debug.Log("no toca");
                 myCollider.enabled = false;
