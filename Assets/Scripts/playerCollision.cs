@@ -23,20 +23,21 @@ public class playerCollision : MonoBehaviour
         Debug.Log("toca");
         if (playerPlatform.gameObject.name == "platform")
         {
-            if (scriptPaintPlatform.numberMaterial == 1 || scriptPaintPlatform.numberMaterial == 2 || scriptPaintPlatform.numberMaterial == 3 || scriptPaintPlatform.numberMaterial == 4)
+            paintPlatform pp = playerPlatform.gameObject.GetComponent<paintPlatform>();
+            if (pp.numberMaterial == 1 || pp.numberMaterial == 2 || pp.numberMaterial == 3 || pp.numberMaterial == 4)
             {
                 Debug.Log("no toca");
-                scriptPaintPlatform.myCollider.enabled = false;
+                pp.myCollider.enabled = false;
             }
-            if (GetComponent<Renderer>().material == scriptPaintPlatform.White)
+            if (GetComponent<Renderer>().material == pp.White)
             {
                 Debug.Log("toca x2");
-                scriptPaintPlatform.myCollider.enabled = true;
+                pp.myCollider.enabled = true;
             }
         }
         else
         {
-            scriptPaintPlatform.myCollider.enabled = true;
+            //scriptPaintPlatform.myCollider.enabled = true;
         }
     }
 }
