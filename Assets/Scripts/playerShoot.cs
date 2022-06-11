@@ -10,6 +10,7 @@ public class playerShoot : MonoBehaviour
 
     public AudioSource source;
     public AudioClip spraySound;
+    public AudioClip backgroundMusic;
 
     [SerializeField] private Image Crosshair;
 
@@ -22,6 +23,8 @@ public class playerShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        source.PlayOneShot(backgroundMusic);
+
         Crosshair.color = new Color(1, 1, 1, 0.75f); // crosshair blanco
 
         scriptPlayerSprayColor = FindObjectOfType<playerSprayColor>(); // vincular scripts
@@ -55,21 +58,25 @@ public class playerShoot : MonoBehaviour
                     {
                         scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Rojo");
+                        scriptPaintPlatform.numberMaterial = 10;
                     }
                     if (scriptPaintPlatform.numberMaterial == 2 && scriptPlayerSprayColor.selectedColor == 1) // si el spray es azul
                     {
                         scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Azul");
+                        scriptPaintPlatform.numberMaterial = 10;
                     }
                     if (scriptPaintPlatform.numberMaterial == 3 && scriptPlayerSprayColor.selectedColor == 2) // si el spray es amarillo
                     {
                         scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Amarillo");
+                        scriptPaintPlatform.numberMaterial = 10;
                     }
                     if (scriptPaintPlatform.numberMaterial == 4 && scriptPlayerSprayColor.selectedColor == 3) // si el spray es verde
                     {
                         scriptPaintPlatform.GetComponent<Renderer>().material = scriptPaintPlatform.White;
                         Debug.Log("Contacto Verde");
+                        scriptPaintPlatform.numberMaterial = 10;
                     }
                 }
             }

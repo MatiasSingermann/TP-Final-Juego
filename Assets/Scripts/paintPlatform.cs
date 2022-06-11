@@ -12,6 +12,8 @@ public class paintPlatform : MonoBehaviour
     public Collider myCollider;
     public int numberMaterial;
 
+    bool theresCollision = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,31 +52,50 @@ public class paintPlatform : MonoBehaviour
         //{
         //    myCollider.enabled = false;
         //}
-        //if (GetComponent<Renderer>().material == White)
-        //{
-        //    myCollider.enabled = true;
-        //}
+        if (GetComponent<Renderer>().material == White)
+        {
+            myCollider.enabled = true;
+        }
+
+        if (theresCollision == false)
+        {
+            Invoke("activateCollision", 3);
+            //timeDelay();
+            //myCollider.enabled = true;
+        }
     }
 
-    //void OnCollisionEnter(Collision playerPlatform)
-    //{
-    //    Debug.Log("toca");
-    //    if (playerPlatform.gameObject.name == "playerCollision")
-    //    {
-    //        if (numberMaterial == 1 || numberMaterial == 2 || numberMaterial == 3 || numberMaterial == 4)
-    //        {
-    //            Debug.Log("no toca");
-    //            myCollider.enabled = false;
-    //        }
-    //        if (GetComponent<Renderer>().material == White)
-    //        {
-    //            Debug.Log("toca");
-    //            myCollider.enabled = true;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        myCollider.enabled = true;
-    //    }
-    //}
+    IEnumerator timeDelay()
+    {
+        yield return new WaitForSeconds(3);
+    }
+
+    void OnCollisionEnter(Collision playerPlatform)
+    {
+        Debug.Log("hay colision");
+        if (playerPlatform.gameObject.name == "player")
+        {
+            if (numberMaterial == 10)
+            {
+                Debug.Log("choca");
+                myCollider.enabled = true;
+                theresCollision = true;
+            }
+            else
+            {
+                Debug.Log("atraviesa");
+                myCollider.enabled = false;
+                theresCollision = false;
+            }
+        }
+        else
+        {
+            myCollider.enabled = true;
+        }
+    }
+
+    void activateCollision()
+    {
+        myCollider.enabled = true;
+    }
 }
