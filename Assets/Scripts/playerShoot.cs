@@ -18,6 +18,8 @@ public class playerShoot : MonoBehaviour
 
     public paintPlatform scriptPaintPlatform;
 
+    public randomizer scriptRandomizer;
+
     public GameObject myPlatform;
 
     // Start is called before the first frame update
@@ -30,6 +32,8 @@ public class playerShoot : MonoBehaviour
         scriptPlayerSprayColor = FindObjectOfType<playerSprayColor>(); // vincular scripts
         
         scriptPaintPlatform = FindObjectOfType<paintPlatform>();
+
+        scriptRandomizer = FindObjectOfType<randomizer>();
     }
 
     // Update is called once per frame
@@ -38,11 +42,13 @@ public class playerShoot : MonoBehaviour
         RaycastHit hit;
         string gameObjectShot;
 
-        if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward, out hit))
+        if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward, out hit, 30f))
         {
             Vector3 shotPosition = hit.point;
             float shootDistance = hit.distance;
             gameObjectShot = hit.collider.gameObject.name;
+
+            Debug.Log(gameObjectShot);
 
             if (hit.transform.gameObject.CompareTag("tagPlatform"))
             {

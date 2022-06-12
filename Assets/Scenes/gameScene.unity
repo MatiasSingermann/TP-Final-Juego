@@ -977,20 +977,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myPlatform: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
     type: 3}
-  myPlatform2: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
-    type: 3}
-  myPlatform3: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
-    type: 3}
-  myPlatform4: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
-    type: 3}
-  myPlatform5: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
-    type: 3}
-  myPlatform6: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
-    type: 3}
-  myPlatform7: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
-    type: 3}
-  myPlatform8: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
-    type: 3}
 --- !u!1 &1505069358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1270,7 @@ MonoBehaviour:
   Crosshair: {fileID: 1719951840}
   scriptPlayerSprayColor: {fileID: 0}
   scriptPaintPlatform: {fileID: 0}
+  scriptRandomizer: {fileID: 0}
   myPlatform: {fileID: 0}
 --- !u!1 &1562535658
 GameObject:

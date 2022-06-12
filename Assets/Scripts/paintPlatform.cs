@@ -21,8 +21,6 @@ public class paintPlatform : MonoBehaviour
 
         myCollider = GetComponent<BoxCollider>();
 
-        // myCollider.enabled = false;
-
         if (rng == 1)
         {
             GetComponent<Renderer>().material = Red;
@@ -48,10 +46,6 @@ public class paintPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(GetComponent<Renderer>().material == Red || GetComponent<Renderer>().material == Blue || GetComponent<Renderer>().material == Yellow || GetComponent<Renderer>().material == Green)
-        //{
-        //    myCollider.enabled = false;
-        //}
         if (GetComponent<Renderer>().material == White)
         {
             myCollider.enabled = true;
@@ -60,8 +54,6 @@ public class paintPlatform : MonoBehaviour
         if (theresCollision == false)
         {
             Invoke("activateCollision", 3);
-            //timeDelay();
-            //myCollider.enabled = true;
         }
     }
 
