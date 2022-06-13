@@ -93,7 +93,7 @@ public class playerShoot : MonoBehaviour
         }
         else
         {
-            Crosshair.color = new Color(1, 1, 1, 0.75f); // crosshair blanco
+            Crosshair.color = new Color(1, 1, 1, 0.75f);
         }
     }
 }
