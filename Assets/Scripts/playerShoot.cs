@@ -48,7 +48,7 @@ public class playerShoot : MonoBehaviour
             float shootDistance = hit.distance;
             gameObjectShot = hit.collider.gameObject.name;
 
-            Debug.Log(gameObjectShot);
+            Debug.Log(gameObjectShot + " - " + scriptPaintPlatform.numberMaterial);
 
             if (hit.transform.gameObject.CompareTag("tagPlatform"))
             {

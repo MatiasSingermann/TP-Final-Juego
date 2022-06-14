@@ -17,7 +17,7 @@ public class paintPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float rng = Random.Range(1, 4);
+        float rng = Random.Range(1, 5);
 
         myCollider = GetComponent<BoxCollider>();
 
