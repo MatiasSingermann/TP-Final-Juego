@@ -975,6 +975,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b56a2051f471844181f51319c8f6694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myPlatformCenter: {fileID: 2558950131999242543, guid: c9e8b1e998906a94583a54faaac11d94,
+    type: 3}
+  myPlatformBorder: {fileID: 379118741101618275, guid: 0293367cb2e0b9945beb595437a935fe,
+    type: 3}
   myPlatform: {fileID: 1803098834026713305, guid: d7dbaad7c7722b74598886a203df3dcb,
     type: 3}
 --- !u!1 &1505069358
@@ -1272,6 +1276,7 @@ MonoBehaviour:
   scriptPaintPlatform: {fileID: 0}
   scriptRandomizer: {fileID: 0}
   myPlatform: {fileID: 0}
+  isHitting: 0
 --- !u!1 &1562535658
 GameObject:
   m_ObjectHideFlags: 0
