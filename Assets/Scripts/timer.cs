@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class timer : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 81f;
+    float startingTime = 80f;
 
     [SerializeField] Text txtTimer;
 
