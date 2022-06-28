@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: 09bc2b811a7265249add9f7a3d44f9c3
+guid: 217f8deb812f31e4993e636a28e0ce9d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: paletaSpray
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Spray
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: paletaSpray
-    second: {fileID: 2800000, guid: af36d32bed3278147944456b0875f159, type: 3}
+    4300000: SprayBody
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

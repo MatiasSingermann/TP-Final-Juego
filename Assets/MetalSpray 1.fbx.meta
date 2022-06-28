@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 761a58b3efd5cf64b8e94ff4e38377dd
+guid: 1457e23efcfbff5499234bf74868e00c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: paletaSpray
     2300000: //RootNode
     3300000: //RootNode
-    4300000: SprayBody
+    4300000: Spray
   externalObjects: {}
   materials:
     importMaterials: 1
